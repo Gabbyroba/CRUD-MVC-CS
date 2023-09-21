@@ -1,0 +1,36 @@
+﻿@model WebCRUDMVCSQL.Models.Produto
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes do Produto</h1>
+
+<div>
+   
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Preço)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Preço)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id"><button type="button" class="btn btn-dark">Alterar</button></a> |
+    <a asp-action="Index"><button type="button" class="btn btn-dark">Voltar</button></a>
+</div>

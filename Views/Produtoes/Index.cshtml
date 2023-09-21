@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebCRUDMVCSQL.Models.Produto>
+
+@{
+    ViewData["Title"] = "Controle de Estoque";
+}
+
+<h1>Controle de estoque</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-dark">Adicionar Produto</a>
+</p><hr/>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preço)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preço)
+            </td>
+            <td>
+                    <a asp-action="Edit" class="btn btn-dark" asp-route-id="@item.Id">Alterar</a> |
+                    <a asp-action="Details" class="btn btn-dark" asp-route-id="@item.Id">Info</a> |
+                    <a asp-action="Delete" class="btn btn-dark" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
