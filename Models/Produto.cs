@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebCRUDMVCSQL.Models
@@ -14,16 +14,16 @@ namespace WebCRUDMVCSQL.Models
 
         [Column("Nome")]
         [Display(Name = "Nome")]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
 
         [Column("Quantidade")]
         [Display(Name = "Quantidade")]
-        public string Quantidade { get; set; }
+        public string? Quantidade { get; set; }
 
 
         [Column("Preço")]
         [Display(Name = "Preço")]
-        public string Preço { get; set; }
+        public string? Preço { get; set; }
     }
 }
